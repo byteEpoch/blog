@@ -1,0 +1,67 @@
+baseURL = "https://byteepoch.dev/"
+title = "byteEpoch"
+copyright = "Esta obra está bajo una Licencia MIT."
+paginate = 2
+languageCode = "es-ES"
+DefaultContentLanguage = "es"
+enableInlineShortcodes = true
+footnoteReturnLinkContents = "^"
+googleAnalytics = "UA-166346086-1"
+DisqusShortname = ""
+theme = "chunky"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 0
+
+[params]
+  author = "Cristian Davis"
+  description = "A new 8-bit era"
+  homepageImage = "/img/homepage.png"
+  share = true
+  showLanguageSwitcher = false
+
+
+  # Custom CSS and JS. Relative to /static/css and /static/js respectively.
+  customCSS = []
+  customJS = []
+
+  [params.social]
+    rss = true
+    email = "root@byteEpoch.dev"
+    twitter = "https://twitter.com/ByteEpoch"
+    linkedin = "https://www.linkedin.com/in/cristian-davis-asensio-050b6971/"
+    github = "https://github.com/byteEpoch"
+
+  [params.prismJS]
+    enable = true
+    theme = ""
+
+  [params.commento]
+    enable = true
+    url = "https://commento.io"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+  author = "authors"
+
+[markup]
+  [markup.highlight]
+    codeFences = false
+
+[services]
+  [services.instagram]
+    disableInlineCSS = true
+
+  [services.twitter]
+    disableInlineCSS = true
