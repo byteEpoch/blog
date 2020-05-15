@@ -1,6 +1,9 @@
-version: 2.1
+version: 2git
 jobs:
   build:
+    branches:
+      only:
+        - master
     docker:
       - image: cibuilds/hugo:latest
     working_directory: ~/hugo

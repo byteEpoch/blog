@@ -7,4 +7,4 @@ tags: []
 authors: ['Cristian Davis']
 ---
 
-OMG. First blog post ever. HELLO WORLD! ;)
+¡Por fin está creado el Blog! OMG. HELLO WORLD! ;)
