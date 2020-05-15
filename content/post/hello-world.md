@@ -7,4 +7,4 @@ tags: []
 authors: ['Cristian Davis']
 ---
 
-¡Por fin está creado el Blog! OMG. HELLO WORLD! ;)
+¡Por fin está creado el Blog! HELLO WORLD! ;)
