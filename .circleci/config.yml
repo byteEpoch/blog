@@ -1,4 +1,4 @@
-version: 2git
+version: 2
 jobs:
   build:
     branches:
