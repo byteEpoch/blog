@@ -1,0 +1,28 @@
+version: 2.1
+jobs:
+  build:
+    branches:
+      only:
+        - master
+    docker:
+      - image: cibuilds/hugo:latest
+    working_directory: ~/hugo
+    environment:
+      HUGO_BUILD_DIR: ~/hugo/public
+    steps:
+      - checkout
+      - run: 
+          name: Checkout theme
+          command: git submodule sync && git submodule update --init
+      - run: 
+          name: Install node and firebase
+          command: |
+            curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+            sudo apt install nodejs -y
+            sudo npm install -g firebase-tools
+      - run:
+          name: Build site 
+          command: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
+      - deploy: 
+          name: deploy to Firebase
+          command: sudo firebase deploy -p $HUGO_BUILD_DIR --token "$FIREBASE_TOKEN"
